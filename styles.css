@@ -36,14 +36,13 @@
     animation: black-hole 1s ease-out  12s;
   }
 
-  
-  .inner__display__wrapper {
+  #inner__display__wrapper {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-  /*   border: 2px solid var(--main-colour); */
+  /*   border: 2px solid var(--color-900); */
     padding:0;
     margin:0;
     background: var(--main-colour) url("./WRLD-EPS-02-3001.png") no-repeat fixed center;
@@ -58,6 +57,7 @@
     border-radius: 50%;
     background-color:rgba(19, 61, 16,0.85);
     box-shadow: .1rem .6rem .6rem inset rgba(0, 0, 0, .24);
+
     
   }
   .radar__grid {
