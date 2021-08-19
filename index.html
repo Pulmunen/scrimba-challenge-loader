@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="board">
+             <!--draws radial lines on the border -->
+            <div class="outer__radar__radial" style="--i:2"></div>
+            <div class="outer__radar__radial" style="--i:4"></div>                           
+            <div class="outer__radar__radial" style="--i:5"></div>
+            <div class="outer__radar__radial" style="--i:7"></div>
+      <div class="inner__display__wrapper">
+        <div class="radar">
+          <div class="radar__grid">
+            <!--draws concentric circle lines on the display-->
+            <div class="concentric__circle"></div>
+            <div class="concentric__circle"></div>
+            <div class="concentric__circle"></div>
+            <div class="concentric__circle"></div>
+            <!--draws radial lines on the display -->
+            <div class="radar__radial" style="--i:2"></div>
+            <div class="radar__radial" style="--i:4"></div>                           
+             <div class="radar__radial" style="--i:5"></div>
+            <div class="radar__radial" style="--i:7"></div>
+          </div><!--radar__grid-->
+          <!-- objects found by radar-->
+          <div class="radar__obj radar__obj--1"></div>
+          <div class="radar__obj radar__obj--2"></div>
+          <div class="radar__obj radar__obj--3"></div>
+          <div class="radar__obj radar__obj--4"></div>
+          <div class="radar__obj radar__obj--5"></div>
+          <div class="radar__obj radar__obj--6"></div>
+          <div class="radar__obj radar__obj--7"></div>
+          <div class="radar__obj radar__obj--8"></div>
+          <div class="radar__obj radar__obj--9"></div>
+          <div class="radar__obj radar__obj--10"></div>
+          <div class="scanner"></div>
+      </div><!--radar-->
+    </div> <!--inner_display__wrapper-->
+    </div><!--outer__display_-wrapper-->
+    <p>Background image attribution: <a href="https://freevectormaps.com/world-maps/WRLD-EPS-02-3001"></a>https://freevectormaps.com/world-maps/WRLD-EPS-02-3001</p>
+  <script src="index.js"></script>
+  </body>
+  
+</html>
