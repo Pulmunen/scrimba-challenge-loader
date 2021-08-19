@@ -44,7 +44,7 @@
   /*   border: 2px solid var(--color-900); */
     padding:0;
     margin:0;
-    background: var(--main-colour) url("./WRLD-EPS-02-3001.png") no-repeat fixed center;
+    background: var(--second-colour) url("./WRLD-EPS-02-3001.png") no-repeat fixed center;
     background-size:400px 400px;
   }
   
