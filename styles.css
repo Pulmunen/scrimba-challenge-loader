@@ -130,6 +130,7 @@
   /*  Paints the scanner line including */
   #scanner {
     position: absolute;
+    overflow: hidden;
     top: 0;
     width: 100%;
     height: 100%;
