@@ -1,24 +1,34 @@
 const board = document.getElementById('board');
 const instruction = document.getElementById('instruction')
+const btn = document.getElementById('btn')
+const scanner = document.getElementById('scanner')
+const shrinkBoard = document.querySelector('.shrink-board')
+const radarObj = document.querySelectorAll('.radar__obj')
 
-window.addEventListener('load', () => {
-    scanner.classList.add('animate-radar')
-    board.classList.add('loading')
+btn.addEventListener('click', startAnim)
+
+function startAnim(e){
     document.body.style.cursor = "wait";
-    instruction.style.transition = "all 0.5s"
-    instruction.style.color = "#191f22"
-});
-
+    this.classList.add('btn-disabled')
+    this.classList.remove('btn-enabled')
+    board.classList.remove('shrink-board')
+    scanner.classList.add('start-scanner')
+    radarObj.forEach(obj =>{
+        obj.classList.add('start-glow')
+    })
+}
 
 board.addEventListener("animationend",  transitionAnim)
 
-function transitionAnim(){
-        board.classList.remove('loading')
-        board.classList.add('loaded')
+function transitionAnim(event){
+    if(event.animationName ==='blink') {
         document.body.style.cursor = "default"
-
-        attribution.style.color = "#fff"
-        attribution.style.transition = "all ease-in 2s"
-        instruction.style.color = "#fff"
-        instruction.style.transition = "all 2s ease-in 2s" 
+        btn.classList.remove('btn-disabled')
+        btn.classList.add('btn-enabled')
+        board.classList.add('shrink-board')
+        scanner.classList.remove('start-scanner')
+        radarObj.forEach(obj =>{
+        obj.classList.remove('start-glow')
+        })
+    }
 }
