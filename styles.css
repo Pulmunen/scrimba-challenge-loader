@@ -199,8 +199,8 @@
 
   .radar__obj::after {
     color: var(--main-colour);
-    font-size:.4em;
-    padding-left: 1rem;
+    font-size:.3em;
+    padding-left: 0.8rem;
     font-size:12px;
     white-space: nowrap;
     border-radius:50%;
@@ -209,7 +209,7 @@
   .radar__obj--1 {
     top: 20%;
     left: 63%;
-    transform: scale(1.7);
+    transform: scale(1.4);
     animation-delay: 1s;
   }
   .radar__obj--1::after {
