@@ -15,13 +15,39 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin: 0;
     height:100vh;
     font-family: 'Ubuntu Mono', monospace;
     color:#fff;
   }
-  
+
+  #btn{
+    padding:0.6em 2em;
+    font-size:1.2rem;
+    background-color:transparent;
+    color:var(--main-colour);
+    border-radius:8%;
+    border:solid 3px var(--main-colour);
+    transition:all 0.5s ease-in 0.1s;
+  }
+
+  #btn:hover,
+  #btn:focus{
+  opacity:0.5;
+  }
+
+  .btn-disabled{
+    opacity:0.5;
+    cursor:wait;
+    transition:opacity 1s ease-out 0.5s;
+  }
+
+  .btn-enabled{
+    cursor:auto;
+    transition:opacity 0.5s ease-out;
+  }
+
   #board{
     width:40vh;
     height:40vh;
@@ -37,7 +63,11 @@
     border: 1em solid var(--background-color);
     background: var(--second-colour) url("./WRLD-EPS-02-3001.png") no-repeat fixed center;
     background-size:cover;
-    animation: black-hole 1s ease-out  11s;
+    }
+
+    .shrink-board{
+      animation: black-hole 1s ease-out 0.5s;
+      animation-fill-mode: forwards;
     }
   
   .radar {
@@ -47,7 +77,7 @@
     height: 100%;
     border-radius: 50%; 
     background-color:rgba(19, 61, 16,0.8);
-    box-shadow: .1rem .6rem .6rem inset rgba(95, 82, 82, 0.24);  
+    box-shadow: .1rem .6rem .6rem inset rgba(95, 82, 82, 0.24);
   }
 
   .radar__grid {
@@ -88,7 +118,7 @@
   }
   
   /* These paint the concentric circles */
-  .radar__grid .concentric__circle {
+  .radar__grid .radar__concentric__circle {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -132,19 +162,19 @@
      rgba(171, 255, 81,0.9) 355deg,
      rgba(171, 255, 81, 1) 360deg
   );
-    transform-origin: calc(center+20%);
+}
+
+  .start-scanner{
+    animation: scan 5s linear 2; 
+    animation-delay:0.5s; 
   }
 
   #attribution {
-      color:var(--background-color);
+      color:#fff;
       text-align:center;
   }
 
-  .animate-radar{
-    animation: scan 5s linear 2;
-}
-  
-  .radar__obj {
+.radar__obj {
     position: absolute;
     border-radius: 50%;
     width: .5rem;
@@ -155,10 +185,13 @@
         0 0 2rem 1rem var(--main-colour),
         0 0 3rem 1.5rem var(--second-colour);
     filter: saturate(1.45);
-    animation: blink 10s cubic-bezier(0.33, 1, 0.68, 1) 2;
     opacity: 0;
   }
-  
+
+  .start-glow{
+    animation: blink 11s cubic-bezier(0.33, 1, 0.68, 1) 1;
+  }
+
   .radar__obj::after {
     color: var(--main-colour);
     font-size:.4em;
@@ -264,16 +297,6 @@
     content: "T-1";
   }
   
-.loading{
-  opacity:1;
-  transition: all 0.5s ease-in 1s;
-}
-
-.loaded{
-  opacity:0;
-  transition: all 0.5s ease-in 1s;
-}
-
   /* Animations */
   @keyframes scan {
     to {
