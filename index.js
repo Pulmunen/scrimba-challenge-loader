@@ -1,7 +1,7 @@
 const board = document.getElementById('board');
 const instruction = document.getElementById('instruction')
 
-window.addEventListener('load', (event) => {
+window.addEventListener('load', () => {
     scanner.classList.add('animate-radar')
     document.body.style.cursor = "wait";
     instruction.style.transition = "all 0.5s"
@@ -14,10 +14,10 @@ board.addEventListener("animationend",  transitionAnim)
 function transitionAnim(){
     setTimeout(()=>{
         board.style.display = "none"
+        document.body.style.cursor = "default"
         attribution.style.color = "#fff"
         attribution.style.transition = "all 2s"
         instruction.style.color = "#fff"
         instruction.style.transition = "all 2s"
-        document.body.style.cursor = "default"
     },2800)    
 }
