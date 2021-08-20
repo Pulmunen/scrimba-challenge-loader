@@ -8,18 +8,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
-    <title>Loader</title>
+    <title>Scrimba Loader</title>
 </head>
 <body>
-    <p id="instruction">Hit refresh to load!</p>
-    <div id="board">
+    <!-- <p id="instruction">Hit refresh to load!</p> -->
+    <div class="container">
+      <div id="loader"></div>
+      <button id="btn" type="button">Load</button>
+  </div>
+    <div id="board" >
         <div class="radar">
           <div class="radar__grid">
             <!--draws concentric circle lines on the display-->
-            <div class="concentric__circle"></div>
-            <div class="concentric__circle"></div>
-            <div class="concentric__circle"></div>
-            <div class="concentric__circle"></div>
+            <div class="radar__concentric__circle"></div>
+            <div class="radar__concentric__circle"></div>
+            <div class="radar__concentric__circle"></div>
+            <div class="radar__concentric__circle"></div>
             <!--draws radial lines on the display -->
             <div class="radar__radial" style="--i:2"></div>
             <div class="radar__radial" style="--i:4"></div>                           
@@ -41,6 +45,7 @@
       </div><!--radar-->
 
     </div><!--board-->
+
     <p id = "attribution">Background image attribution: <a href="https://freevectormaps.com/world-maps/WRLD-EPS-02-3001"></a>https://freevectormaps.com/world-maps/WRLD-EPS-02-3001</p>
   <script src="index.js"></script>
   </body>
