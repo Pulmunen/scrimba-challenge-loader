@@ -42,6 +42,10 @@
     background-size:cover;
     }
   
+ @media (orientation:landscape){
+     width:40vh;
+     height:40vh;
+}
   .radar {
     position: relative;
     overflow: hidden;
