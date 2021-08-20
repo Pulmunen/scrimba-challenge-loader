@@ -87,23 +87,25 @@
     border-radius:50%;
     overflow:hidden;
   }
+
   .radar__grid::before {
     content: '';
     display: block;
     position: absolute;
     border-radius:50%;
-    overflow:hidden;
+    /* overflow:hidden; */
     left: 50%;
     width: 1px;
     height: 100%;
     background-color: var(--main-colour);
   }
+
   .radar__grid::after {
     content: '';
     display: block;
     position: absolute;
     border-radius:50%;
-    overflow:hidden;
+    /* overflow:hidden; */
     top: 50%;
     width: 100%;
     height: 1px;
@@ -150,6 +152,7 @@
   .radar__grid > :nth-child(4) {
     width: 80%;
     height: 80%;
+    border-radius:50%;
   }
   
   /*  Paints the scanner line including */
@@ -200,11 +203,11 @@
 
   .radar__obj::after {
     color: var(--main-colour);
-    border-radius:50%;
     font-size:.4em;
     padding-left: 1rem;
     font-size:12px;
     white-space: nowrap;
+    border-radius:50%;
   }
   
   .radar__obj--1 {
