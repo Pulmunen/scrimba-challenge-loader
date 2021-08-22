@@ -11,44 +11,37 @@
     <title>Scrimba Loader</title>
 </head>
 <body>
+  <div id="learning-summary">
+    <div id="summary-text">
+      <h3>I learned:</h2>
+        <ul>
+          <li>How to use clip path on divs</li>
+          <li>Make sure you test on iOS!</li>
+          <li>How to use divs to place circles and lines</li>
+          <li>How to use html attributes and css variables to dynamically set values in JavaScript</li>
+        </ul>
+        <h3>I practiced:</h3>
+        <ul>
+          <li>Keyframes and animations</li>
+          <li>Animationend as event listener</li>
+          <li>The :not selector</li>
+          <li>Setting attributes in Javascript</li>
+        </ul>
+    
+    </div>
+  </div><!--end learning-summary -->
     <!-- <p id="instruction">Hit refresh to load!</p> -->
     <div class="container">
       <div id="loader"></div>
       <button id="btn" type="button">Load</button>
-  </div>
+  </div><!--end container-->
     <div id="board" >
-        <div class="radar">
-          <div class="radar__grid">
-            <!--draws concentric circle lines on the display-->
-            <div class="radar__concentric__circle"></div>
-            <div class="radar__concentric__circle"></div>
-            <div class="radar__concentric__circle"></div>
-            <div class="radar__concentric__circle"></div>
-            <!--draws radial lines on the display -->
-            <div class="radar__radial" style="--i:2"></div>
-            <div class="radar__radial" style="--i:4"></div>                           
-             <div class="radar__radial" style="--i:5"></div>
-            <div class="radar__radial" style="--i:7"></div>
-          
-          <!-- objects found by radar-->
-          <div class="radar__obj radar__obj--1"></div>
-          <div class="radar__obj radar__obj--2"></div>
-          <div class="radar__obj radar__obj--3"></div>
-          <div class="radar__obj radar__obj--4"></div>
-          <div class="radar__obj radar__obj--5"></div>
-          <div class="radar__obj radar__obj--6"></div>
-          <div class="radar__obj radar__obj--7"></div>
-          <div class="radar__obj radar__obj--8"></div>
-          <div class="radar__obj radar__obj--9"></div>
-          <div class="radar__obj radar__obj--10"></div>
-          <span id="scanner"></span>
-         </div><!--radar__grid-->
+        <div id="radar">
+          <div id="grid"></div><!--radar__grid-->
       </div><!--radar-->
-
     </div><!--board-->
 
-    <p id = "attribution">Background image attribution: <a href="https://freevectormaps.com/world-maps/WRLD-EPS-02-3001"></a>https://freevectormaps.com/world-maps/WRLD-EPS-02-3001</p>
-  <script src="index.js"></script>
+    <p id = "attribution">Background image attribution: <a href="https://freevectormaps.com/world-maps/WRLD-EPS-02-3001"></a>https://freevectormaps.com/world-maps/WRLD-EPS-02-3001</p>  <script src="index.js"></script>
   </body>
   
 </html>
